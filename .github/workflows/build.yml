@@ -105,7 +105,7 @@ jobs:
         if: github.event.inputs.buildToolchain == 'android-tools'
         working-directory: ${{ env.WORK_DIR }}
         run: |
-          repo init -u https://android.googlesource.com/kernel/manifest -b common-android13-5.15-lts --depth=1
+          repo init -u https://android.googlesource.com/kernel/manifest -b android13-5.15-2023-11 --depth=1.
           repo sync --optimized-fetch --prune --force-sync -j$(nproc --all)
           rm -rf common
           rm -rf .repo
