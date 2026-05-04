@@ -29,7 +29,7 @@ jobs:
           git remote add upstream https://android.googlesource.com/kernel/common
           
           echo "Looking for the latest updates from upstream..."
-          git fetch upstream android13-5.15-lts
+          git fetch upstream android13-5.15-2023-11
           
           UPSTREAM_TREE=$(git rev-parse upstream/android13-5.15-lts^{tree})
           LOCAL_TREE=$(git rev-parse HEAD^{tree})
