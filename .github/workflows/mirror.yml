@@ -27,7 +27,7 @@ jobs:
         run: |
           mkdir kernel-workspace
           cd kernel-workspace
-          repo init --depth=1 -u https://android.googlesource.com/kernel/manifest -b common-android13-5.15-lts
+          repo init --depth=1 -u https://android.googlesource.com/kernel/manifest -b android13-5.15-2023-11
           repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune -j8 common
 
       - name: Push to GitHub (Branch 'google')
